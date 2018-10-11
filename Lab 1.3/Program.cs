@@ -15,11 +15,11 @@ namespace Lab_1._3
             const decimal i = 10;
             const decimal j = 0.01M;
 
-            float numeratorFloat = (a + b) * (a + b) * (a + b) * (a + b) - (a * a * a * a + 4 * a * a * a * b);
-            float denominatorFloat = 6 * a * a * b * b + 4 * a * b * b * b + b * b * b * b;
+            float numeratorFloat = (float)(Math.Pow(a + b, 4) - (Math.Pow(a ,4) + 4 * Math.Pow(a, 3) * b));
+            float denominatorFloat = (float)(6 * Math.Pow(a, 2) * Math.Pow(b, 2) + 4 * a * Math.Pow(b, 3) + Math.Pow(b, 4));
 
-            double numeratorDouble = (x + y) * (x + y) * (x + y) * (x + y) - (x * x * x * x + 4 * x * x * x * y);
-            double denominatorDouble = 6 * x * x * y * y + 4 * x * y * y * y + y * y * y * y;
+            double numeratorDouble = Math.Pow(x + y, 4) - (Math.Pow(x, 4) + 4 * Math.Pow(x, 3) * y);
+            double denominatorDouble = 6 * Math.Pow(x, 2) * Math.Pow(y, 2) + 4 * x * Math.Pow(y, 3) + Math.Pow(y, 4);
 
             decimal numeratorDecimal = (i + j) * (i + j) * (i + j) * (i + j) - (i * i * i * i + 4 * i * i * i * j);
             decimal denominatorDecimal = 6 * i * i * j * j + 4 * i * j * j * j + j * j * j * j;
